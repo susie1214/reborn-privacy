@@ -3,93 +3,210 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>REBORN 개인정보처리방침 / Privacy Policy</title>
+<title>REBORN — 사회성 성장 RPG | 나를 먼저 업그레이드하라</title>
+<meta name="description" content="모태솔로·자존감 고민을 게임처럼. 자기관리·대화·소개팅 연습으로 솔로탈출을 돕는 온디바이스 성장 코치 RPG. 광고 없음 · 개인정보 수집 없음 · 오프라인.">
+<meta property="og:title" content="REBORN — 사회성 성장 RPG">
+<meta property="og:description" content="연애도 실력입니다. 자기관리·대화·소개팅 연습을 게임처럼 — 나를 먼저 업그레이드하는 자기성장 RPG.">
+<meta property="og:image" content="assets/feature.jpg">
+<meta property="og:type" content="website">
 <style>
-  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans KR",sans-serif;
-       max-width:760px;margin:0 auto;padding:28px 18px;line-height:1.7;color:#1d2433;background:#fff}
-  h1{font-size:1.5rem} h2{font-size:1.15rem;margin-top:1.8rem;border-left:4px solid #6C4CE0;padding-left:10px}
-  .muted{color:#666;font-size:.9rem} ul{padding-left:1.2rem} code{background:#f3f1fb;padding:1px 5px;border-radius:4px}
-  .ok{color:#0a7d33;font-weight:700}
+  :root{
+    --bg:#0B0F17; --bg2:#10162270; --card:#141B2BE6; --line:#243049;
+    --txt:#E8ECF6; --muted:#9AA6BF;
+    --teal:#22E0C8; --mag:#FF4FD8; --blue:#4C8DFF; --gold:#FFC857; --green:#36E07A; --purple:#8B6CFF;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Pretendard',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans KR",sans-serif;
+    background:var(--bg); color:var(--txt); line-height:1.7; overflow-x:hidden;
+  }
+  a{color:var(--teal);text-decoration:none}
+  .wrap{max-width:1000px;margin:0 auto;padding:0 20px}
+
+  /* glow background blobs */
+  .bg-fx{position:fixed;inset:0;z-index:-1;overflow:hidden}
+  .blob{position:absolute;border-radius:50%;filter:blur(90px);opacity:.5}
+  .b1{width:480px;height:480px;background:#22E0C8;top:-160px;left:-120px;opacity:.22}
+  .b2{width:520px;height:520px;background:#FF4FD8;top:120px;right:-180px;opacity:.18}
+  .b3{width:420px;height:420px;background:#4C8DFF;bottom:-160px;left:30%;opacity:.16}
+
+  /* HERO */
+  header{padding:64px 0 40px;text-align:center}
+  .badge{display:inline-block;font-size:.8rem;letter-spacing:.18em;font-weight:800;
+    color:var(--teal);border:1px solid var(--line);padding:6px 14px;border-radius:999px;
+    background:#0e1626;margin-bottom:26px;text-transform:uppercase}
+  .appicon{width:108px;height:108px;border-radius:26px;box-shadow:0 0 0 1px #ffffff14, 0 18px 50px #22e0c84d, 0 8px 30px #ff4fd83a;}
+  h1{font-size:clamp(2.4rem,7vw,4rem);font-weight:900;letter-spacing:-.02em;margin:22px 0 6px;
+    background:linear-gradient(100deg,var(--teal),#8be9ff 35%,var(--mag));
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+    filter:drop-shadow(0 4px 24px #22e0c855)}
+  .kicker{font-size:.95rem;font-weight:800;letter-spacing:.22em;color:var(--muted);text-transform:uppercase}
+  .tagline{font-size:clamp(1.05rem,3vw,1.4rem);color:var(--txt);margin:18px auto 6px;max-width:620px;font-weight:600}
+  .sub{color:var(--muted);max-width:560px;margin:0 auto 30px}
+
+  .cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:8px}
+  .btn{display:inline-flex;align-items:center;gap:8px;font-weight:800;font-size:1rem;
+    padding:14px 26px;border-radius:14px;border:1px solid transparent;transition:.18s;cursor:pointer}
+  .btn-primary{color:#06121a;background:linear-gradient(95deg,var(--teal),#5ff0dd);
+    box-shadow:0 10px 30px #22e0c84d}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 38px #22e0c866}
+  .btn-ghost{color:var(--txt);border-color:var(--line);background:#0e1626}
+  .btn-ghost:hover{border-color:var(--teal);color:var(--teal)}
+  .note{font-size:.82rem;color:var(--muted);margin-top:16px}
+
+  /* feature graphic */
+  .feature-img{display:block;width:100%;max-width:880px;margin:44px auto 0;border-radius:18px;
+    border:1px solid var(--line);box-shadow:0 24px 70px #00000066}
+
+  /* SECTION */
+  section{padding:60px 0}
+  .h2{font-size:clamp(1.5rem,4vw,2.1rem);font-weight:900;text-align:center;letter-spacing:-.01em}
+  .h2 .acc{background:linear-gradient(100deg,var(--teal),var(--mag));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .lead{text-align:center;color:var(--muted);max-width:620px;margin:14px auto 0}
+
+  /* feature grid */
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:40px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px;
+    transition:.2s;position:relative;overflow:hidden}
+  .card:hover{transform:translateY(-4px);border-color:#34507e}
+  .card .ic{font-size:1.8rem;display:inline-grid;place-items:center;width:52px;height:52px;border-radius:14px;
+    margin-bottom:14px;background:#0e1626;border:1px solid var(--line)}
+  .card h3{font-size:1.12rem;font-weight:800;margin-bottom:6px}
+  .card p{color:var(--muted);font-size:.95rem}
+  .c-teal .ic{box-shadow:0 0 22px #22e0c855;color:var(--teal)}
+  .c-mag .ic{box-shadow:0 0 22px #ff4fd855;color:var(--mag)}
+  .c-blue .ic{box-shadow:0 0 22px #4c8dff55;color:var(--blue)}
+  .c-green .ic{box-shadow:0 0 22px #36e07a55;color:var(--green)}
+  .c-gold .ic{box-shadow:0 0 22px #ffc85755;color:var(--gold)}
+  .c-purple .ic{box-shadow:0 0 22px #8b6cff55;color:var(--purple)}
+
+  /* screenshots */
+  .shots{display:flex;gap:16px;overflow-x:auto;padding:40px 4px 10px;scroll-snap-type:x mandatory}
+  .shots img{height:440px;border-radius:22px;border:1px solid var(--line);scroll-snap-align:center;
+    box-shadow:0 18px 50px #00000066;flex:0 0 auto}
+
+  /* privacy band */
+  .privacy{background:linear-gradient(180deg,#0e1626,#0b0f17);border:1px solid var(--line);
+    border-radius:22px;padding:40px 28px;text-align:center;margin-top:20px}
+  .pills{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:24px}
+  .pill{font-size:.92rem;font-weight:700;color:var(--txt);background:#0b1220;border:1px solid var(--line);
+    padding:10px 16px;border-radius:999px}
+  .pill b{color:var(--green)}
+
+  /* steps */
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:36px;counter-reset:s}
+  .step{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px 22px;position:relative}
+  .step::before{counter-increment:s;content:counter(s);position:absolute;top:-16px;left:22px;
+    width:34px;height:34px;border-radius:10px;display:grid;place-items:center;font-weight:900;
+    color:#06121a;background:linear-gradient(95deg,var(--teal),var(--mag))}
+  .step h4{margin:8px 0 6px;font-size:1.05rem}
+  .step p{color:var(--muted);font-size:.92rem}
+
+  footer{border-top:1px solid var(--line);padding:40px 0 60px;text-align:center;color:var(--muted);font-size:.9rem;margin-top:40px}
+  footer a{margin:0 8px}
+  .disc{max-width:640px;margin:18px auto 0;font-size:.8rem;color:#6b7794}
 </style>
 </head>
 <body>
-<h1>REBORN 개인정보처리방침</h1>
-<p class="muted">최종 업데이트: 2026-06-27 · 앱: REBORN (com.rebornai.app) · 문의: rebornai.app@gmail.com</p>
+<div class="bg-fx"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div></div>
 
-<p>REBORN(이하 "앱")은 사용자의 프라이버시를 최우선으로 설계되었습니다.
-본 앱은 <strong>기본적으로 어떠한 개인정보도 수집하거나 외부 서버로 전송하지 않습니다.</strong>
-다만 사용자가 직접 본인의 AI API 키를 입력해 <strong>선택적 클라우드 AI 기능</strong>을 사용하는 경우에 한해,
-입력하신 텍스트와 프로필 정보가 제3자(Google)로 전송됩니다. 자세한 내용은 아래 6항을 참고하세요.</p>
+<header>
+  <div class="wrap">
+    <span class="badge">Social-Skill Growth RPG</span><br>
+    <img class="appicon" src="assets/icon.png" alt="REBORN 앱 아이콘">
+    <h1>REBORN</h1>
+    <p class="kicker">Please Upgrade ME</p>
+    <p class="tagline">연애도 실력입니다. 나를 먼저 업그레이드하세요.</p>
+    <p class="sub">모태솔로·자존감 고민을 게임처럼. 자기관리·대화·소개팅 연습으로
+      한 단계씩 레벨업하는 <b>온디바이스 자기성장 코치 RPG</b>.</p>
+    <div class="cta">
+      <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.rebornai.app">▶ Google Play에서 보기</a>
+      <a class="btn btn-ghost" href="privacy-policy.html">개인정보처리방침</a>
+    </div>
+    <p class="note">현재 비공개 테스트(클로즈 베타) 진행 중 · 곧 정식 출시</p>
+    <img class="feature-img" src="assets/feature.jpg" alt="REBORN 대표 이미지">
+  </div>
+</header>
 
-<h2>1. 수집하지 않는 정보</h2>
-<p>앱은 다음을 <span class="ok">일절 수집·접근하지 않습니다</span>:</p>
-<ul>
-  <li>이름·전화번호·이메일 등 신원 정보</li>
-  <li>얼굴 사진 및 얼굴 인식 데이터</li>
-  <li>음성 녹음 및 오디오</li>
-  <li>위치 정보</li>
-  <li>생체 정보</li>
-  <li>연락처·캘린더</li>
-  <li>기기 식별자 및 광고 ID</li>
-</ul>
+<section id="features">
+  <div class="wrap">
+    <h2 class="h2">게임처럼 성장하는 <span class="acc">자기계발</span></h2>
+    <p class="lead">잔소리도 비난도 없습니다. 당신의 작은 시도 하나하나를 경험치로 바꿔 드립니다.</p>
+    <div class="grid">
+      <div class="card c-green"><div class="ic">🎯</div><h3>퀘스트로 레벨업</h3>
+        <p>매일 퀘스트를 깨며 EXP·골드·전설 상자 획득. 청결·체력·대화력 등 7대 능력치를 눈으로 확인.</p></div>
+      <div class="card c-mag"><div class="ic">💬</div><h3>실전 모의 소개팅</h3>
+        <p>캐릭터와 1:1 대화 + 단계별 실시간 코칭으로 "무슨 말을 해야 할지"를 몸에 익힙니다.</p></div>
+      <div class="card c-blue"><div class="ic">📱</div><h3>메신저 소개팅 연습</h3>
+        <p>메시지를 주고받으며 즉시 피드백. 레드플래그 점검으로 무심한 말투를 호감 표현으로 교정.</p></div>
+      <div class="card c-teal"><div class="ic">🧍</div><h3>온디바이스 체형·스타일</h3>
+        <p>전신 사진 한 장으로 체형 분석·스타일 처방. 사진은 폰에서 1회만 분석, 저장·전송 없음.</p></div>
+      <div class="card c-gold"><div class="ic">✨</div><h3>피부·자기관리 솔루션</h3>
+        <p>여드름·아토피·발 관리까지 바로 실천하는 가이드. 연령별 패션·만남 장소 추천.</p></div>
+      <div class="card c-purple"><div class="ic">🔮</div><h3>AI 코치 & 사주</h3>
+        <p>고민을 털어놓으면 따뜻하고 현실적인 답변. 사주 애정운·금전운까지 재미있게.</p></div>
+    </div>
+  </div>
+</section>
 
-<h2>2. 기기 내 저장 (온디바이스)</h2>
-<p>닉네임, 자가 진단 결과, 캐릭터 설정, 퀘스트 진행도 등 앱 사용 데이터는
-오직 <strong>사용자 기기 내부 저장소</strong>에만 보관됩니다.
-앱은 기본적으로 오프라인으로 동작합니다(선택적 AI 기능을 사용하지 않는 한 외부 전송이 없습니다. 6항 참고).</p>
-<p><strong>체형 스타일(사진) 기능:</strong> 사용자가 카메라/갤러리로 선택한 사진 1장을
-<strong>기기 내부에서만 1회 분석</strong>(온디바이스 자세 추정)하여 옷차림을 추천하며,
-<strong>원본 사진을 저장하거나 외부로 전송하지 않습니다.</strong> 얼굴 인식·생체 식별을 하지 않으며,
-분석 후 사진 데이터는 메모리에서 사라집니다.</p>
+<section>
+  <div class="wrap">
+    <h2 class="h2">앱 <span class="acc">미리보기</span></h2>
+    <div class="shots">
+      <img src="assets/s1.png" alt="홈 화면">
+      <img src="assets/s2.png" alt="기능 그리드">
+      <img src="assets/s3.png" alt="체형 분석">
+      <img src="assets/s4.png" alt="피부 자기관리 솔루션">
+      <img src="assets/s5.png" alt="사주 애정운·금전운">
+    </div>
+  </div>
+</section>
 
-<h2>3. 제3자 제공 및 공유</h2>
-<p>기본 동작에서는 제3자에게 제공·판매·공유되는 정보가 없습니다.
-다만 사용자가 선택적 클라우드 AI 기능을 켠 경우, 입력하신 텍스트와 프로필 정보(닉네임·나이·직업·지역·관심사·목표 등)가
-답변 생성을 위해 사용자가 선택한 AI 제공자(Google LLC · Anthropic · OpenAI 중)로 전송됩니다(6항). 그 외 어떤 정보도 광고·판매 목적으로 공유하지 않습니다.</p>
+<section id="privacy">
+  <div class="wrap">
+    <div class="privacy">
+      <h2 class="h2">프라이버시를 <span class="acc">지킵니다</span></h2>
+      <p class="lead">회원가입 없음. 모든 데이터는 오직 내 기기에만 저장됩니다.</p>
+      <div class="pills">
+        <span class="pill"><b>✔</b> 광고 없음</span>
+        <span class="pill"><b>✔</b> 개인정보 수집 없음</span>
+        <span class="pill"><b>✔</b> 기본 완전 오프라인</span>
+        <span class="pill"><b>✔</b> 얼굴·음성·위치 미수집</span>
+        <span class="pill"><b>✔</b> 사진 저장·전송 없음</span>
+      </div>
+      <p class="note" style="margin-top:22px">(선택) AI 코치는 본인 키(Gemini 무료 / Claude / GPT)를 넣었을 때만 입력 텍스트가 해당 제공자로 전송됩니다.
+        자세한 내용은 <a href="privacy-policy.html">개인정보처리방침</a>을 확인하세요.</p>
+    </div>
+  </div>
+</section>
 
-<h2>4. 데이터 삭제 (회원탈퇴)</h2>
-<p><strong>앱(REBORN, 개발자: REBORN)의 모든 사용자 데이터는 사용자 기기에만 저장되며, 개발자 서버에 보관되는 데이터는 없습니다.</strong></p>
-<p><strong>삭제 방법(단계):</strong> 앱 실행 → 하단 탭/메뉴의 <code>설정</code> → <code>데이터 전체 삭제 / 회원탈퇴</code> 버튼 → 확인.
-이 한 번의 동작으로 아래 모든 데이터가 <strong>즉시 영구 삭제</strong>되며 복구할 수 없습니다.</p>
-<p><strong>삭제되는 데이터 유형:</strong> 닉네임·프로필(나이·직업·지역·관심사·목표), 진단/자가체크 결과, 캐릭터·능력치, 퀘스트·미션 진행도, 출석·보상 기록, 코치 대화 내역 및 자동 추출 메모.</p>
-<p><strong>보관 기간:</strong> 위 데이터는 사용자 기기에만 있으므로 별도 서버 보관 기간이 없습니다(보관 0). 앱을 삭제(언인스톨)해도 모든 로컬 데이터가 함께 제거됩니다.
-선택적 AI 코치 사용 시 외부 AI 제공자로 전송된 입력 텍스트의 보관·삭제는 사용자가 직접 선택한 제공자(Google·Anthropic·OpenAI)의 정책을 따릅니다.</p>
+<section id="start">
+  <div class="wrap">
+    <h2 class="h2">시작하는 <span class="acc">방법</span></h2>
+    <p class="lead">3단계면 충분합니다. 오늘의 작은 습관이 내일의 큰 변화를 만듭니다.</p>
+    <div class="steps">
+      <div class="step"><h4>설치하고 캐릭터 생성</h4><p>닉네임과 목표를 정하면 나만의 성장 캐릭터가 만들어집니다.</p></div>
+      <div class="step"><h4>매일 퀘스트 클리어</h4><p>자기관리·대화 미션을 깨며 능력치를 올리고 보상을 받으세요.</p></div>
+      <div class="step"><h4>실전처럼 연습</h4><p>모의 소개팅·메신저·AI 코치로 안전하게 실력을 쌓습니다.</p></div>
+    </div>
+    <div class="cta" style="margin-top:44px">
+      <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.rebornai.app">▶ Google Play에서 보기</a>
+    </div>
+  </div>
+</section>
 
-<h2>5. 광고 및 결제</h2>
-<p>본 앱에는 광고가 없으며, 광고 ID를 사용하지 않습니다. 현재 인앱 결제가 없습니다.
-향후 결제가 도입될 경우 Google Play 결제 정책을 준수하고 본 방침을 갱신합니다.</p>
-
-<h2>6. AI 기능 고지</h2>
-<p>AI 코치·말투 분석·레드플래그 점검·사주 풀이 등 기본 기능은 모두 기기 내부의 규칙 기반 로직으로
-동작하며 외부로 데이터를 전송하지 않습니다.</p>
-<p><strong>선택적 클라우드 AI(BYO 키):</strong> 사용자가 직접 본인의 AI API 키(Google Gemini, Anthropic Claude, 또는 OpenAI 중 선택)를 입력한 경우에 한해,
-AI 챗 사용 시 입력하신 텍스트와 함께 맞춤 답변을 위한 프로필 정보(닉네임·나이·직업·지역·관심사·목표·성격 메모·앱 내 누적 기억)가
-선택한 제공자(Google LLC, Anthropic, 또는 OpenAI)로 전송됩니다. 이는 전적으로 사용자의 선택이며,
-키를 입력하지 않으면 어떠한 데이터도 외부로 전송되지 않습니다. 이 경우 해당 제공자의 개인정보처리방침
-(<a href="https://policies.google.com/privacy">Google</a> ·
-<a href="https://www.anthropic.com/legal/privacy">Anthropic</a> ·
-<a href="https://openai.com/policies/privacy-policy">OpenAI</a>)이 함께 적용됩니다. 키는 사용자 기기에만 저장됩니다.</p>
-
-<h2>7. 아동 보호</h2>
-<p>본 앱은 성인 사용자를 대상으로 하며 아동의 개인정보를 의도적으로 수집하지 않습니다.</p>
-
-<h2>8. 방침 변경</h2>
-<p>본 방침은 관련 법령 또는 기능 변경에 따라 갱신될 수 있으며, 변경 시 본 페이지에 게시합니다.</p>
-
-<h2>Contact</h2>
-<p>문의: <a href="mailto:rebornai.app@gmail.com">rebornai.app@gmail.com</a></p>
-
-<hr>
-<h1>Privacy Policy (English summary)</h1>
-<p>REBORN collects <strong>no personal data by default</strong> and has no account system. All data (nickname,
-diagnosis results, character, quest progress) is stored <strong>only on your device</strong>. We do not collect
-identity, face/voice/biometric, location, contacts, or advertising IDs, and there are no ads.
-Core AI features (coach, speech analysis, red-flag check) run on-device (rule-based) with no external calls.
-<strong>Optional cloud AI (bring-your-own-key):</strong> only if you enter your own AI API key
-(Google Gemini, Anthropic Claude, or OpenAI),
-your chat text and profile info (nickname, age, job, region, interests, goals, saved memories) are sent to
-your chosen provider (Google LLC, Anthropic, or OpenAI) to generate replies; that provider's Privacy Policy then also applies. You can permanently
-delete all local data anytime via <code>Settings &gt; Delete all data</code>.
-Contact: rebornai.app@gmail.com</p>
+<footer>
+  <div class="wrap">
+    <p><b style="color:var(--txt)">REBORN</b> · Please Upgrade ME</p>
+    <p style="margin-top:8px">
+      <a href="privacy-policy.html">개인정보처리방침</a>·
+      <a href="mailto:rebornai.app@gmail.com">문의: rebornai.app@gmail.com</a>
+    </p>
+    <p class="disc">※ 본 앱은 만 19세 이상 성인을 대상으로 하며, 친밀감 관련 성숙한 주제(동의·존중 중심, 노골적 묘사 없음)를 포함합니다.
+      본 앱은 전문 의료·심리 상담을 대체하지 않습니다. 위기 상황에는 정신건강 상담전화 1577-0199로 연락하세요.</p>
+    <p style="margin-top:14px">© 2026 REBORN. All rights reserved.</p>
+  </div>
+</footer>
 </body>
 </html>
